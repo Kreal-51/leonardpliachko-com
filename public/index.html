@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Leonard Pliachko, Product Manager</title>
+<meta name="description" content="Senior Product Manager in B2B SaaS. 31 enterprise features shipped at Masterplan.com. I turn feature requests into clickable prototypes before the sprint starts.">
+<meta property="og:title" content="Leonard Pliachko, Product Manager">
+<meta property="og:description" content="Feature request in. Prototype out. Senior PM, B2B SaaS and enterprise.">
+<meta property="og:url" content="https://leonardpliachko.com">
+<meta property="og:image" content="https://leonardpliachko.com/og.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://leonardpliachko.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23FF2E88'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='900' font-size='15' text-anchor='middle' fill='%23fff'%3ELP%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Leonard Pliachko","jobTitle":"Senior Product Manager","email":"mailto:leonard.pleczko@gmail.com","url":"https://leonardpliachko.com","address":{"@type":"PostalAddress","addressLocality":"Wrocław","addressCountry":"PL"},"sameAs":["https://www.linkedin.com/in/leonard-pliachko"],"knowsAbout":["Product management","B2B SaaS","Enterprise LMS","SCIM","xAPI","cmi5","Prototyping with Claude Code","Cloudflare Workers","Shopify"]}
+</script>
+<style>
+@font-face{font-family:Archivo;font-weight:100 900;font-stretch:62% 125%;font-display:swap;src:url(fonts/archivo.woff2) format('woff2')}
+@font-face{font-family:Archivo;font-weight:100 900;font-stretch:62% 125%;font-display:swap;src:url(fonts/archivo-ext.woff2) format('woff2');unicode-range:U+0100-024F}
+@font-face{font-family:Geist;font-weight:400;font-display:swap;src:url(fonts/geist-400.woff2) format('woff2')}
+@font-face{font-family:Geist;font-weight:500;font-display:swap;src:url(fonts/geist-500.woff2) format('woff2')}
+@font-face{font-family:Geist;font-weight:600;font-display:swap;src:url(fonts/geist-600.woff2) format('woff2')}
+@font-face{font-family:Geist;font-weight:400 600;font-display:swap;src:url(fonts/archivo-ext.woff2) format('woff2');unicode-range:U+0100-024F}
+@font-face{font-family:GeistMono;font-weight:400;font-display:swap;src:url(fonts/geist-mono.woff2) format('woff2')}
+
+/* KissMySkills lab system: ink ground, lime and pink signal colours, heavy Archivo display, Geist body, mono labels */
+:root{
+  --ink:#080A08; --panel:#10130F; --panel-2:#161A14; --line:#242A21;
+  --text:#EEF3EA; --muted:#B9C3B3; --dim:#7C8676;
+  --lime:#C6FF3A; --lime-hover:#D6FF6E; --pink:#FF2E88; --pink-hover:#FF5AA3; --pink-deep:#5A0B31;
+  --blue:#4D9FFF; --violet:#A979FF;
+  --display:Archivo,"Arial Narrow",sans-serif; --body:Geist,ui-sans-serif,system-ui,sans-serif; --mono:GeistMono,ui-monospace,monospace;
+  --max:1160px; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--ink);color:var(--muted);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--lime)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--lime);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:24px}
+@media (max-width:600px){.wrap{padding-inline:16px}}
+.mono{font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+h1,h2,.display{font-family:var(--display);font-weight:850;font-stretch:88%;text-transform:uppercase;color:var(--text);letter-spacing:-.01em;line-height:.95;margin:0;text-wrap:balance}
+.lime{color:var(--lime)} .pink{color:var(--pink)}
+
+/* nav */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(8,10,8,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:18px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:600;font-size:17px}
+.brand i{display:grid;place-items:center;width:32px;height:32px;border-radius:8px;background:var(--pink);color:#fff;font-style:normal;font-family:var(--display);font-weight:900;font-size:14px}
+.status{font-family:var(--mono);font-size:13px;color:var(--lime);border:1px solid rgba(198,255,58,.55);border-radius:999px;padding:5px 12px 5px 10px;display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 3px rgba(255,46,136,.25)}
+.nav nav{display:flex;gap:22px;margin-left:8px}
+.nav nav a{color:var(--text);text-decoration:none;font-family:var(--mono);font-size:14px}
+.nav nav a:hover{color:var(--lime)}
+.nav .cta{margin-left:auto}
+@media (max-width:900px){.nav nav{display:none}}
+@media (max-width:520px){.status{display:none}}
+
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 16px/1 var(--body);padding:15px 22px;border-radius:12px;text-decoration:none;cursor:pointer;border:1px solid transparent;transition:background .15s,border-color .15s,color .15s}
+.btn.pink{background:var(--pink);color:#fff;border-radius:999px;padding:11px 18px;font-size:15px}
+.btn.pink:hover{background:var(--pink-hover)}
+.btn.lime{background:var(--lime);color:var(--ink)}
+.btn.lime:hover{background:var(--lime-hover)}
+.btn.ghost{background:transparent;color:var(--text);border-color:#3A4236}
+.btn.ghost:hover{border-color:var(--lime);color:var(--lime)}
+.btn small{font-weight:400;opacity:.7;font-size:13px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.08fr 1fr;gap:48px;align-items:center;padding-block:64px 72px}
+@media (max-width:960px){.hero{grid-template-columns:1fr;padding-block:40px 56px}}
+.who{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.avatar{width:76px;height:76px;border-radius:50%;flex:none;background:linear-gradient(135deg,var(--pink),var(--violet));display:grid;place-items:center;font-family:var(--display);font-weight:900;color:#fff;font-size:18px;overflow:hidden;border:2px solid var(--line)}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.who b{display:block;color:var(--text);font-weight:600}
+h1{font-size:clamp(44px,6vw,80px);font-stretch:76%}
+.lede{font-size:19px;max-width:33em;margin:24px 0 30px;color:var(--muted)}
+.lede b{color:var(--text);font-weight:500}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.works{margin-top:30px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:13px;color:var(--text);border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:6px 12px}
+.chip svg{width:14px;height:14px}
+
+/* demo */
+.stage{position:relative;border:1px solid #2A3027;border-radius:22px;padding:28px;background:radial-gradient(120% 90% at 30% 20%,#2A0E1E 0%,#120A10 45%,var(--panel) 100%);box-shadow:0 0 0 1px rgba(198,255,58,.08),0 30px 120px -40px rgba(198,255,58,.35);min-height:470px}
+@media (max-width:960px){.stage{min-height:0}}
+.story{background:var(--lime);color:var(--ink);border-radius:14px;padding:22px 22px 20px;transform:rotate(-1.2deg);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.story .k{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;opacity:.65;margin:0 0 10px}
+.story h3{font:600 20px/1.32 var(--body);margin:0 0 14px}
+.story ul{list-style:none;padding:0;margin:0 0 18px;font-size:15px}
+.story li{padding-left:27px;position:relative;margin-bottom:5px}
+.story li::before{content:"";position:absolute;left:0;top:4px;width:15px;height:15px;border:2px solid var(--ink);border-radius:4px}
+.story li.done::before{background:var(--ink)}
+.story li.done::after{content:"";position:absolute;left:5px;top:6px;width:5px;height:9px;border:solid var(--lime);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.story .btn{background:var(--ink);color:var(--lime);padding:12px 18px;font-size:15px}
+.story .btn[disabled]{opacity:.6;cursor:default}
+.stage.built .story{transform:rotate(-3deg) translate(-8px,-10px) scale(.93)}
+.app{position:absolute;left:52px;right:-14px;top:150px;background:#0D100C;border:1px solid #2E352B;border-radius:16px;box-shadow:0 30px 70px -20px rgba(0,0,0,.8);opacity:0;transform:translateY(24px);pointer-events:none;transition:opacity .45s ease .15s,transform .55s cubic-bezier(.2,.8,.2,1) .15s;overflow:hidden}
+.stage.built .app{opacity:1;transform:none;pointer-events:auto}
+@media (max-width:960px){.app{position:relative;left:0;right:0;top:0;margin-top:-14px;display:none}.stage.built .app{display:block}}
+.app-bar{display:flex;align-items:center;gap:7px;padding:11px 14px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--dim)}
+.app-bar i{width:9px;height:9px;border-radius:50%;background:#2E352B}
+.app-bar span{margin-left:6px}
+.app-body{padding:16px}
+.app-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:12px}
+.app-head strong{color:var(--text);font-weight:600}
+.app table{width:100%;border-collapse:collapse;font-size:14.5px}
+.app th{text-align:left;font-weight:400;color:var(--dim);padding:8px 6px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+.app td{padding:9px 6px;border-bottom:1px solid var(--line);color:var(--text)}
+.app td.n,.app th.n{text-align:right;font-variant-numeric:tabular-nums}
+.app input{width:16px;height:16px;accent-color:var(--lime)}
+.app .btn{padding:9px 14px;font-size:14px;border-radius:10px}
+.app .note{font-size:13.5px;color:var(--dim);margin:12px 0 0}
+.app .note.ok{color:var(--lime)}
+
+/* sections */
+section{padding-block:96px;border-top:1px solid var(--line)}
+@media (max-width:600px){section{padding-block:68px}}
+h2{font-size:clamp(36px,5vw,62px);max-width:16ch}
+.intro{max-width:38em;margin:18px 0 44px;font-size:18px}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+
+/* logos */
+.logos{padding-block:30px;border-top:1px solid var(--line)}
+.logos .row{display:flex;align-items:center;gap:14px 34px;flex-wrap:wrap;margin-top:14px}
+.logos a{display:inline-flex;align-items:center;gap:10px;color:var(--text);text-decoration:none;font-weight:600;font-size:16px;opacity:.72;transition:opacity .15s}
+.logos a:hover{opacity:1}
+.logos img{width:28px;height:28px;border-radius:7px;background:#fff;object-fit:contain;padding:2px}
+.logos .txt{display:grid;place-items:center;width:28px;height:28px;border-radius:7px;background:var(--panel-2);color:var(--lime);font-family:var(--display);font-weight:900;font-size:13px}
+
+/* numbers: KMS coloured cards */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media (max-width:980px){.nums{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.nums{grid-template-columns:1fr}}
+.num{border:1px solid var(--line);border-top:2px solid var(--c);border-radius:16px;padding:22px;background:linear-gradient(180deg,color-mix(in srgb,var(--c) 9%,transparent),transparent 60%),var(--panel)}
+.num .mono{color:var(--c)}
+.num b{display:block;font-family:var(--display);font-weight:850;font-stretch:88%;font-size:clamp(46px,5vw,62px);line-height:1;color:var(--text);margin:18px 0 10px}
+.num p{margin:0;font-size:15.5px}
+.c1{--c:var(--lime)} .c2{--c:var(--pink)} .c3{--c:var(--blue)} .c4{--c:var(--violet)}
+
+/* process */
+.flow{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:s}
+@media (max-width:980px){.flow{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.flow{grid-template-columns:1fr}}
+.flow li{counter-increment:s;border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--panel)}
+.flow li::before{content:"0" counter(s);font-family:var(--mono);font-size:12.5px;color:var(--lime);letter-spacing:.1em}
+.flow b{display:block;color:var(--text);font-size:18px;font-weight:600;margin:10px 0 6px}
+.flow p{margin:0;font-size:15px}
+
+/* cases */
+.case{display:grid;grid-template-columns:260px 1fr;gap:36px;padding-block:38px;border-top:1px solid var(--line)}
+.case:first-of-type{border-top:0;padding-top:0}
+@media (max-width:820px){.case{grid-template-columns:1fr;gap:14px}}
+.co{display:flex;flex-direction:column;gap:10px}
+.co .logo{display:flex;align-items:center;gap:12px}
+.co img{width:44px;height:44px;border-radius:11px;background:#fff;padding:3px;object-fit:contain}
+.co .name{font-family:var(--display);font-weight:850;font-stretch:88%;text-transform:uppercase;color:var(--text);font-size:26px;line-height:1}
+.co a.site{font-family:var(--mono);font-size:13px;text-decoration:none}
+.co a.site:hover{text-decoration:underline}
+.co .when{font-size:14.5px;color:var(--dim)}
+.case h3{font:600 23px/1.3 var(--body);color:var(--text);margin:0 0 12px;max-width:32em}
+.case p{margin:0 0 12px;max-width:42em}
+.case ul{margin:0;padding-left:20px;max-width:42em}
+.case li{margin-bottom:7px}
+.case li::marker{color:var(--lime)}
+.hl{color:var(--ink);background:var(--lime);font-weight:600;padding:1px 7px;border-radius:5px}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.tags span{font-family:var(--mono);font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+
+/* toolkit */
+.kit{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media (max-width:820px){.kit{grid-template-columns:1fr}}
+.group{border:1px solid var(--line);border-radius:16px;padding:22px;background:var(--panel)}
+.group h3{font:600 18px/1.3 var(--body);color:var(--text);margin:0 0 4px}
+.group p{margin:0 0 16px;font-size:15px}
+.tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(136px,1fr));gap:8px}
+.tool{display:flex;align-items:center;gap:10px;border:1px solid var(--line);background:var(--panel-2);border-radius:11px;padding:10px 11px;color:var(--text);font-size:14.5px}
+.tool svg,.tool .ph{width:20px;height:20px;flex:none}
+.tool .ph{display:grid;place-items:center;border-radius:5px;background:var(--line);color:var(--lime);font:600 11px var(--mono)}
+
+/* experience */
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{display:grid;grid-template-columns:200px 36px 1fr;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.timeline li:last-child{border-bottom:0}
+.timeline .d{font-family:var(--mono);font-size:13px;color:var(--dim)}
+.timeline img,.timeline .txt{width:32px;height:32px;border-radius:8px;background:#fff;padding:2px;object-fit:contain}
+.timeline .txt{display:grid;place-items:center;background:var(--panel-2);color:var(--lime);font:900 13px var(--display)}
+.timeline .r{color:var(--text);font-weight:600}
+@media (max-width:600px){.timeline li{grid-template-columns:36px 1fr;row-gap:2px}.timeline .d{grid-column:2;order:3}}
+
+/* lab */
+.lab{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:760px){.lab{grid-template-columns:1fr}}
+.lab article{border:1px solid var(--line);border-radius:16px;padding:24px;background:var(--panel)}
+.lab h3{margin:0 0 8px;font:600 20px var(--body)}
+.lab h3 a{color:var(--text);text-decoration-color:var(--pink);text-underline-offset:5px}
+.lab p{margin:0;font-size:15.5px}
+
+/* creds */
+.creds{display:grid;grid-template-columns:1.4fr 1fr;gap:40px}
+@media (max-width:760px){.creds{grid-template-columns:1fr;gap:28px}}
+.creds ul{list-style:none;margin:0;padding:0}
+.creds li{padding:13px 0;border-bottom:1px solid var(--line);color:var(--text)}
+.creds li span{display:block;color:var(--dim);font-size:14.5px}
+
+/* contact */
+.contact{padding-block:110px 90px;border-top:1px solid var(--line)}
+.contact h2{font-size:clamp(42px,6.4vw,84px);max-width:14ch}
+.mail{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:30px 0 22px}
+.mail code{font-family:var(--mono);font-size:clamp(16px,2.2vw,22px);color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px;user-select:all;overflow-wrap:anywhere}
+.mail button{font:500 14px var(--body);background:transparent;color:var(--lime);border:1px solid rgba(198,255,58,.5);border-radius:10px;padding:11px 14px;cursor:pointer}
+.contact .grid{display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:center}
+@media (max-width:860px){.contact .grid{grid-template-columns:1fr}}
+.portrait{border-radius:22px;overflow:hidden;border:1px solid #2A3027;box-shadow:0 0 0 1px rgba(198,255,58,.08),0 30px 100px -40px rgba(255,46,136,.45);max-width:440px}
+.portrait img{display:block;width:100%;height:auto}
+footer{border-top:1px solid var(--line);padding-block:24px 40px;font-family:var(--mono);font-size:12.5px;color:var(--dim)}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap nav">
+  <a class="brand" href="#"><i>LP</i>Leonard Pliachko</a>
+  <span class="status">Open to work</span>
+  <nav aria-label="Main"><a href="#work">Work</a><a href="#toolkit">Toolkit</a><a href="#experience">Experience</a><a href="#lab">Lab</a></nav>
+  <a class="btn pink cta" href="cv/Leonard-Pliachko-CV.pdf">Download CV</a>
+</div></header>
+
+<main class="wrap">
+<div class="hero">
+  <div>
+    <div class="who">
+      <div class="avatar"><img src="leonard.jpg" alt="Leonard Pliachko" width="54" height="54"></div>
+      <div><b>Leonard Pliachko</b><span class="mono">Senior PM · B2B SaaS · Wrocław, EU remote</span></div>
+    </div>
+    <h1>Feature request in.<br><span class="lime">Prototype out.</span></h1>
+    <p class="lede"><b>I shipped 31 enterprise features in three years at Masterplan.com.</b> Before a feature reaches the sprint, I build a version you can click with Claude Code and Cloudflare, so customers and developers react to a screen instead of a paragraph.</p>
+    <div class="actions">
+      <a class="btn lime" href="cv/Leonard-Pliachko-CV.pdf">Download CV <small>PDF, 2 pages</small></a>
+      <a class="btn ghost" href="#contact">Get in touch</a>
+    </div>
+    <div class="works">
+      <span class="mono">Builds with</span>
+      <div class="chips"><span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#D97757" d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></svg>Claude</span><span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#EEF3EA" d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z"/></svg>Claude Code</span><span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#EEF3EA" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>GitHub</span><span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F38020" d="M16.5088 16.8447c.1475-.5068.0908-.9707-.1553-1.3154-.2246-.3164-.6045-.499-1.0615-.5205l-8.6592-.1123a.1559.1559 0 0 1-.1333-.0713c-.0283-.042-.0351-.0986-.021-.1553.0278-.084.1123-.1484.2036-.1562l8.7359-.1123c1.0351-.0489 2.1601-.8868 2.5537-1.9136l.499-1.3013c.0215-.0561.0293-.1128.0147-.168-.5625-2.5463-2.835-4.4453-5.5499-4.4453-2.5039 0-4.6284 1.6177-5.3876 3.8614-.4927-.3658-1.1187-.5625-1.794-.499-1.2026.119-2.1665 1.083-2.2861 2.2856-.0283.31-.0069.6128.0635.894C1.5683 13.171 0 14.7754 0 16.752c0 .1748.0142.3515.0352.5273.0141.083.0844.1475.1689.1475h15.9814c.0909 0 .1758-.0645.2032-.1553l.12-.4268zm2.7568-5.5634c-.0771 0-.1611 0-.2383.0112-.0566 0-.1054.0415-.127.0976l-.3378 1.1744c-.1475.5068-.0918.9707.1543 1.3164.2256.3164.6055.498 1.0625.5195l1.8437.1133c.0557 0 .1055.0263.1329.0703.0283.043.0351.1074.0214.1562-.0283.084-.1132.1485-.204.1553l-1.921.1123c-1.041.0488-2.1582.8867-2.5527 1.914l-.1406.3585c-.0283.0713.0215.1416.0986.1416h6.5977c.0771 0 .1474-.0489.169-.126.1122-.4082.1757-.837.1757-1.2803 0-2.6025-2.125-4.727-4.7344-4.727"/></svg>Cloudflare</span><span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F24E1E" d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z"/></svg>Figma</span><span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#0052CC" d="M11.571 11.513H0a5.218 5.218 0 0 0 5.232 5.215h2.13v2.057A5.215 5.215 0 0 0 12.575 24V12.518a1.005 1.005 0 0 0-1.005-1.005zm5.723-5.756H5.736a5.215 5.215 0 0 0 5.215 5.214h2.129v2.058a5.218 5.218 0 0 0 5.215 5.214V6.758a1.001 1.001 0 0 0-1.001-1.001zM23.013 0H11.455a5.215 5.215 0 0 0 5.215 5.215h2.129v2.057A5.215 5.215 0 0 0 24 12.483V1.005A1.001 1.001 0 0 0 23.013 0Z"/></svg>Jira</span></div>
+    </div>
+  </div>
+
+  <div class="stage" id="stage">
+    <div class="story">
+      <p class="k">Request from an enterprise customer</p>
+      <h3>As an L&amp;D admin, I want to export my user groups, so I can report on them in our HR system.</h3>
+      <ul id="ac"><li>Pick one or more groups</li><li>Export members as CSV</li><li>Works without help from support</li></ul>
+      <button class="btn" id="build" type="button">Prototype it</button>
+    </div>
+    <div class="app" aria-live="polite">
+      <div class="app-bar"><i></i><i></i><i></i><span>company space / user groups</span></div>
+      <div class="app-body">
+        <div class="app-head"><strong>User groups</strong><button class="btn lime" id="exp" type="button">Export CSV</button></div>
+        <table><thead><tr><th scope="col"><span style="position:absolute;left:-9999px">Select</span></th><th scope="col">Group</th><th scope="col" class="n">Members</th></tr></thead><tbody id="rows"></tbody></table>
+        <p class="note" id="note">Pick groups, then export. The file is real.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+
+<div class="logos"><div class="wrap">
+  <span class="mono">Products I have shipped at</span>
+  <div class="row">
+    <a href="https://masterplan.com" target="_blank" rel="noopener"><img src="logos/masterplan.png" alt="">Masterplan</a>
+    <a href="https://www.holdapp.com" target="_blank" rel="noopener"><img src="logos/holdapp.png" alt="">Holdapp</a>
+    <a href="https://www.holdapp.com/projects/homla-app-home-decor" target="_blank" rel="noopener"><img src="logos/homla.png" alt="">Homla</a>
+    <a href="https://www.mimeeq.com" target="_blank" rel="noopener"><img src="logos/mimeeq.png" alt="">Mimeeq</a>
+    <a href="https://napoleoncat.com" target="_blank" rel="noopener"><img src="logos/napoleoncat.png" alt="">NapoleonCat</a>
+    <a href="https://bowwe.com" target="_blank" rel="noopener"><img src="logos/bowwe.png" alt="">BOWWE</a>
+    <a href="https://crealeon.com" target="_blank" rel="noopener"><span class="txt">C</span>Crealeon</a>
+  </div>
+</div></div>
+
+<div class="wrap">
+<section aria-labelledby="n-h">
+  <span class="mono">// In numbers</span>
+  <h2 id="n-h" style="margin:14px 0 40px">Receipts, not adjectives.</h2>
+  <div class="nums">
+    <div class="num c1"><span class="mono">01 · Masterplan</span><b>31</b><p>enterprise features shipped in three years, from SCIM to cmi5.</p></div>
+    <div class="num c2"><span class="mono">02 · Masterplan</span><b>196</b><p>customer requests answered with a clear status: done, planned or declined.</p></div>
+    <div class="num c3"><span class="mono">03 · NapoleonCat</span><b>1.6M</b><p>Auto-moderation runs in the first month after launch.</p></div>
+    <div class="num c4"><span class="mono">04 · Otto Group</span><b>2 wks</b><p>to deliver every go-live requirement for Hermes Germany.</p></div>
+  </div>
+</section>
+
+<section id="how" aria-labelledby="how-h">
+  <span class="mono">// How I work</span>
+  <h2 id="how-h" style="margin-top:14px">How a feature moves through my hands</h2>
+  <p class="intro">Most of the cost of a feature is decided before the first line of production code, so that is where I spend my time.</p>
+  <ol class="flow">
+    <li><b>Hear it</b><p>Requests from customers, sales and support land in one pool, with the real problem written next to them.</p></li>
+    <li><b>Click it</b><p>A working prototype in a day or two. People react to a screen, not a paragraph.</p></li>
+    <li><b>Cut it</b><p>Scope down to what solves the problem. User stories the team can estimate.</p></li>
+    <li><b>Ship it</b><p>Sprint, QA, release. I stay in the details with engineering until it is live.</p></li>
+    <li><b>Tell it</b><p>A release post for the whole company, a Q&amp;A for sales and support, and credit to whoever asked.</p></li>
+  </ol>
+</section>
+
+<section id="work" aria-labelledby="work-h">
+  <div class="head"><div><span class="mono">// Selected work</span><h2 id="work-h" style="margin-top:14px">Four products, four kinds of customer</h2></div></div>
+  <div style="height:44px"></div>
+
+  <article class="case">
+    <div class="co"><div class="logo"><img src="logos/masterplan.png" alt=""><span class="name">Masterplan</span></div><a class="site" href="https://masterplan.com" target="_blank" rel="noopener">masterplan.com ↗</a><span class="when">2023 to now. Corporate learning platform for DACH enterprises, part of Amadeus Fire Group since 2025.</span></div>
+    <div>
+      <h3>Making a learning platform ready for enterprise buyers</h3>
+      <p>Large companies do not sign until the platform fits their HR stack and their admins can work without calling support. I own that gap on the Enterprise Ready team: eight people across backend, frontend, QA and design.</p>
+      <ul>
+        <li><span class="hl">31 features</span> shipped, each with its own release post: SCIM provisioning, Roles &amp; Permissions, Audit Log, Analytics Dashboard, Batch Operations, xAPI and cmi5.</li>
+        <li>Every go-live requirement for Hermes Germany, part of Otto Group, delivered <span class="hl">within 2 weeks</span>.</li>
+        <li><span class="hl">196 customer requests</span> answered with a clear status and the reason behind it. Requests from customer success became releases such as Export and user status filters.</li>
+        <li>Analytics Dashboard piloted with six companies, then released to everyone. One colleague called it "a game changer for all those admins".</li>
+      </ul>
+      <div class="tags"><span>Enterprise LMS</span><span>SCIM</span><span>xAPI</span><span>cmi5</span><span>Roles &amp; Permissions</span><span>Audit Log</span></div>
+    </div>
+  </article>
+
+  <article class="case">
+    <div class="co"><div class="logo"><img src="logos/napoleoncat.png" alt=""><span class="name">NapoleonCat</span></div><a class="site" href="https://napoleoncat.com" target="_blank" rel="noopener">napoleoncat.com ↗</a><span class="when">2021 to 2023. Social media management SaaS.</span></div>
+    <div>
+      <h3>Auto-moderation, built from scratch on five social platform APIs</h3>
+      <p>Brands drown in comments. We built rules that hide, delete or reply automatically across Facebook, Instagram, LinkedIn, TikTok and YouTube.</p>
+      <ul>
+        <li><span class="hl">1.6M runs</span> in the first month after launch.</li>
+        <li>At least 30 minutes a day saved for every client moderation team. It became one of the three core products.</li>
+        <li>Also shipped Social CRM with a Shopify integration, a rebuilt iOS and Android app, and add-on billing.</li>
+      </ul>
+      <div class="tags"><span>Meta API</span><span>Shopify API</span><span>Mobile</span><span>Billing</span></div>
+    </div>
+  </article>
+
+  <article class="case">
+    <div class="co"><div class="logo"><img src="logos/homla.png" alt=""><span class="name">Homla</span></div><a class="site" href="https://www.holdapp.com/projects/homla-app-home-decor" target="_blank" rel="noopener">case study at holdapp.com ↗</a><span class="when">2023, at Holdapp. Mobile commerce, home decor.</span></div>
+    <div>
+      <h3>Shopping app for a home decor chain with 60+ stores</h3>
+      <p>Product manager at Holdapp for the Homla app, launched on iOS and Android in August 2023.</p>
+      <ul>
+        <li>Shared cart between web and mobile, the Homla Smart Club loyalty program, push notifications and a nearest-store finder.</li>
+        <li>Featured by DesignRush among the best app designs; the app later won the <span class="hl">Mobile Trends Awards 2025</span> in Commerce.</li>
+      </ul>
+      <div class="tags"><span>iOS</span><span>Android</span><span>m-commerce</span><span>Loyalty</span></div>
+    </div>
+  </article>
+
+  <article class="case">
+    <div class="co"><div class="logo"><img src="logos/bowwe.png" alt=""><span class="name">BOWWE</span></div><a class="site" href="https://bowwe.com" target="_blank" rel="noopener">bowwe.com ↗</a><span class="when">2020 to 2021. No-code website builder.</span></div>
+    <div>
+      <h3>Relaunching a website builder against Wix and Webflow</h3>
+      <ul>
+        <li>Led the v2.0 relaunch and go-to-market: drag-and-drop editor, SEO manager, template library.</li>
+        <li>New activation flow <span class="hl">projected to grow annual revenue 3.5x</span>.</li>
+        <li>Spun off a CV builder, a link-in-bio page builder and OVH domain integration on the same engine.</li>
+      </ul>
+      <div class="tags"><span>No-code</span><span>Go-to-market</span><span>Activation</span></div>
+    </div>
+  </article>
+</section>
+
+<section id="toolkit" aria-labelledby="kit-h">
+  <span class="mono">// Toolkit</span>
+  <h2 id="kit-h" style="margin-top:14px">What I work with every day</h2>
+  <p class="intro">Product craft first, tools second. These are the ones I know well enough to teach.</p>
+  <div class="kit">
+    <div class="group"><h3>Plan and deliver</h3><p>Discovery, roadmaps, user stories, Scrum and Kanban.</p><div class="tools"><span class="tool"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#0052CC" d="M11.571 11.513H0a5.218 5.218 0 0 0 5.232 5.215h2.13v2.057A5.215 5.215 0 0 0 12.575 24V12.518a1.005 1.005 0 0 0-1.005-1.005zm5.723-5.756H5.736a5.215 5.215 0 0 0 5.215 5.214h2.129v2.058a5.218 5.218 0 0 0 5.215 5.214V6.758a1.001 1.001 0 0 0-1.001-1.001zM23.013 0H11.455a5.215 5.215 0 0 0 5.215 5.215h2.129v2.057A5.215 5.215 0 0 0 24 12.483V1.005A1.001 1.001 0 0 0 23.013 0Z"/></svg>Jira</span><span class="tool"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#EEF3EA" d="M.87 18.257c-.248.382-.53.875-.763 1.245a.764.764 0 0 0 .255 1.04l4.965 3.054a.764.764 0 0 0 1.058-.26c.199-.332.454-.763.733-1.221 1.967-3.247 3.945-2.853 7.508-1.146l4.957 2.337a.764.764 0 0 0 1.028-.382l2.364-5.346a.764.764 0 0 0-.382-1 599.851 599.851 0 0 1-4.965-2.361C10.911 10.97 5.224 11.185.87 18.257zM23.131 5.743c.249-.405.531-.875.764-1.25a.764.764 0 0 0-.256-1.034L18.675.404a.764.764 0 0 0-1.058.26c-.195.335-.451.763-.734 1.225-1.966 3.246-3.945 2.85-7.508 1.146L4.437.694a.764.764 0 0 0-1.027.382L1.046 6.422a.764.764 0 0 0 .382 1c1.039.49 3.105 1.467 4.965 2.361 6.698 3.246 12.392 3.029 16.738-4.04z"/></svg>Confluence</span><span class="tool"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F24E1E" d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z"/></svg>Figma</span><span class="tool"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#EEF3EA" d="M17.392 0H13.9L17 4.808 10.444 0H6.949l3.102 6.3L3.494 0H0l3.05 8.131L0 24h3.494L10.05 6.985 6.949 24h3.494L17 5.494 13.899 24h3.493L24 3.672 17.392 0z"/></svg>Miro</span><span class="tool"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#7B68EE" d="M2 18.439l3.69-2.828c1.961 2.56 4.044 3.739 6.363 3.739 2.307 0 4.33-1.166 6.203-3.704L22 18.405C19.298 22.065 15.941 24 12.053 24 8.178 24 4.788 22.078 2 18.439zM12.04 6.15l-6.568 5.66-3.036-3.52L12.055 0l9.543 8.296-3.05 3.509z"/></svg>ClickUp</span><span class="tool"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#18BFFF" d="M11.992 1.966c-.434 0-.87.086-1.28.257L1.779 5.917c-.503.208-.49.908.012 1.116l8.982 3.558a3.266 3.266 0 0 0 2.454 0l8.982-3.558c.503-.196.503-.908.012-1.116l-8.957-3.694a3.255 3.255 0 0 0-1.272-.257zM23.4 8.056a.589.589 0 0 0-.222.045l-10.012 3.877a.612.612 0 0 0-.38.564v8.896a.6.6 0 0 0 .821.552L23.62 18.1a.583.583 0 0 0 .38-.551V8.653a.6.6 0 0 0-.6-.596zM.676 8.095a.644.644 0 0 0-.48.19C.086 8.396 0 8.53 0 8.69v8.355c0 .442.515.737.908.54l6.27-3.006.307-.147 2.969-1.436c.466-.22.43-.908-.061-1.092L.883 8.138a.57.57 0 0 0-.207-.044z"/></svg>Airtable</span><span class="tool"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#EEF3EA" d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></svg>Notion</span><span class="tool"><span class="ph">Sl</span>Slack</span></div></div>
+    <div class="group"><h3>Build and prototype with AI</h3><p>Specs, docs and clickable prototypes, live on a real URL.</p><div class="tools"><span class="tool"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#D97757" d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></svg>Claude</span><span class="tool"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#EEF3EA" d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z"/></svg>Claude Code</span><span class="tool"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#EEF3EA" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>GitHub</span><span class="tool"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F38020" d="M16.5088 16.8447c.1475-.5068.0908-.9707-.1553-1.3154-.2246-.3164-.6045-.499-1.0615-.5205l-8.6592-.1123a.1559.1559 0 0 1-.1333-.0713c-.0283-.042-.0351-.0986-.021-.1553.0278-.084.1123-.1484.2036-.1562l8.7359-.1123c1.0351-.0489 2.1601-.8868 2.5537-1.9136l.499-1.3013c.0215-.0561.0293-.1128.0147-.168-.5625-2.5463-2.835-4.4453-5.5499-4.4453-2.5039 0-4.6284 1.6177-5.3876 3.8614-.4927-.3658-1.1187-.5625-1.794-.499-1.2026.119-2.1665 1.083-2.2861 2.2856-.0283.31-.0069.6128.0635.894C1.5683 13.171 0 14.7754 0 16.752c0 .1748.0142.3515.0352.5273.0141.083.0844.1475.1689.1475h15.9814c.0909 0 .1758-.0645.2032-.1553l.12-.4268zm2.7568-5.5634c-.0771 0-.1611 0-.2383.0112-.0566 0-.1054.0415-.127.0976l-.3378 1.1744c-.1475.5068-.0918.9707.1543 1.3164.2256.3164.6055.498 1.0625.5195l1.8437.1133c.0557 0 .1055.0263.1329.0703.0283.043.0351.1074.0214.1562-.0283.084-.1132.1485-.204.1553l-1.921.1123c-1.041.0488-2.1582.8867-2.5527 1.914l-.1406.3585c-.0283.0713.0215.1416.0986.1416h6.5977c.0771 0 .1474-.0489.169-.126.1122-.4082.1757-.837.1757-1.2803 0-2.6025-2.125-4.727-4.7344-4.727"/></svg>Cloudflare</span><span class="tool"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#6D00CC" d="M13.38 3.498c-.27 0-.511.19-.566.465L9.85 18.986a.578.578 0 0 0 .453.678l4.095.826a.58.58 0 0 0 .682-.455l2.963-15.021a.578.578 0 0 0-.453-.678l-4.096-.826a.589.589 0 0 0-.113-.012zm-5.876.098a.576.576 0 0 0-.516.318L.062 17.697a.575.575 0 0 0 .256.774l3.733 1.877a.578.578 0 0 0 .775-.258l6.926-13.781a.577.577 0 0 0-.256-.776L7.762 3.658a.571.571 0 0 0-.258-.062zm11.74.115a.576.576 0 0 0-.576.576v15.426c0 .318.258.578.576.578h4.178a.58.58 0 0 0 .578-.578V4.287a.578.578 0 0 0-.578-.576Z"/></svg>Make</span><span class="tool"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F03C2E" d="M13.09 23.549a1.54 1.54 0 0 1-2.18 0L.451 13.089a1.54 1.54 0 0 1 0-2.179l7.191-7.19 2.733 2.733a1.85 1.85 0 0 0 .964 2.326v6.66a1.849 1.849 0 1 0 1.54 0V8.957l2.508 2.508a1.85 1.85 0 1 0 1.09-1.09l-2.634-2.634a1.85 1.85 0 0 0-2.378-2.377L8.73 2.63 10.91.451a1.54 1.54 0 0 1 2.179 0l10.459 10.46a1.54 1.54 0 0 1 0 2.179z"/></svg>Git</span></div></div>
+    <div class="group"><h3>Integrations</h3><p>The plumbing enterprise buyers ask about first.</p><div class="tools"><span class="tool"><span class="ph">{}</span>REST APIs</span><span class="tool"><span class="ph">SC</span>SCIM 2.0</span><span class="tool"><span class="ph">SS</span>SSO</span><span class="tool"><span class="ph">xA</span>xAPI</span><span class="tool"><span class="ph">c5</span>cmi5</span><span class="tool"><span class="ph">SR</span>SCORM</span></div></div>
+    <div class="group"><h3>Commerce and customer feedback</h3><p>Stores, CMSs and the loop back from users.</p><div class="tools"><span class="tool"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#7AB55C" d="M15.337 23.979l7.216-1.561s-2.604-17.613-2.625-17.73c-.018-.116-.114-.192-.211-.192s-1.929-.136-1.929-.136-1.275-1.274-1.439-1.411c-.045-.037-.075-.057-.121-.074l-.914 21.104h.023zM11.71 11.305s-.81-.424-1.774-.424c-1.447 0-1.504.906-1.504 1.141 0 1.232 3.24 1.715 3.24 4.629 0 2.295-1.44 3.76-3.406 3.76-2.354 0-3.54-1.465-3.54-1.465l.646-2.086s1.245 1.066 2.28 1.066c.675 0 .975-.545.975-.932 0-1.619-2.654-1.694-2.654-4.359-.034-2.237 1.571-4.416 4.827-4.416 1.257 0 1.875.361 1.875.361l-.945 2.715-.02.01zM11.17.83c.136 0 .271.038.405.135-.984.465-2.064 1.639-2.508 3.992-.656.213-1.293.405-1.889.578C7.697 3.75 8.951.84 11.17.84V.83zm1.235 2.949v.135c-.754.232-1.583.484-2.394.736.466-1.777 1.333-2.645 2.085-2.971.193.501.309 1.176.309 2.1zm.539-2.234c.694.074 1.141.867 1.429 1.755-.349.114-.735.231-1.158.366v-.252c0-.752-.096-1.371-.271-1.871v.002zm2.992 1.289c-.02 0-.06.021-.078.021s-.289.075-.714.21c-.423-1.233-1.176-2.37-2.508-2.37h-.115C12.135.209 11.669 0 11.265 0 8.159 0 6.675 3.877 6.21 5.846c-1.194.365-2.063.636-2.16.674-.675.213-.694.232-.772.87-.075.462-1.83 14.063-1.83 14.063L15.009 24l.927-21.166z"/></svg>Shopify</span><span class="tool"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#21759B" d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0"/></svg>WordPress</span><span class="tool"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#96588A" d="M.754 9.58a.754.754 0 00-.754.758v2.525c0 .42.339.758.758.758h3.135l1.431.799-.326-.799h2.373a.757.757 0 00.758-.758v-2.525a.757.757 0 00-.758-.758H.754zm2.709.445h.03c.065.001.124.023.179.067a.26.26 0 01.103.19.29.29 0 01-.033.16c-.13.239-.236.64-.322 1.199-.083.541-.114.965-.094 1.267a.392.392 0 01-.039.219.213.213 0 01-.176.12c-.086.006-.177-.034-.263-.124-.31-.316-.555-.788-.735-1.416-.216.425-.375.744-.478.957-.196.376-.363.568-.502.578-.09.007-.166-.069-.233-.228-.17-.436-.352-1.277-.548-2.524a.297.297 0 01.054-.222c.047-.064.116-.095.21-.102.169-.013.265.065.288.238.103.695.217 1.284.336 1.766l.727-1.387c.066-.126.15-.192.25-.199.146-.01.237.083.273.28.083.441.188.817.315 1.136.086-.844.233-1.453.44-1.828a.255.255 0 01.218-.147zm1.293.36c.056 0 .116.006.18.02.232.05.411.177.53.386.107.18.161.395.161.654 0 .343-.087.654-.26.94-.2.332-.459.5-.781.5a.88.88 0 01-.18-.022.763.763 0 01-.531-.384 1.287 1.287 0 01-.158-.659c0-.342.085-.655.258-.937.202-.333.462-.498.78-.498zm2.084 0c.056 0 .116.006.18.02.236.05.411.177.53.386.107.18.16.395.16.654 0 .343-.086.654-.259.94-.2.332-.459.5-.781.5a.88.88 0 01-.18-.022.763.763 0 01-.531-.384 1.287 1.287 0 01-.16-.659c0-.342.087-.655.26-.937.202-.333.462-.498.78-.498zm4.437.047c-.305 0-.546.102-.718.304-.173.203-.256.49-.256.856 0 .395.086.697.256.906.17.21.418.316.744.316.315 0 .559-.107.728-.316.17-.21.256-.504.256-.883s-.087-.673-.26-.879c-.176-.202-.424-.304-.75-.304zm-1.466.002a1.13 1.13 0 00-.84.326c-.223.22-.332.499-.332.838 0 .362.108.658.328.88.22.223.505.336.861.336.103 0 .22-.016.346-.052v-.54c-.117.034-.216.051-.303.051a.545.545 0 01-.422-.177c-.106-.12-.16-.278-.16-.48 0-.19.053-.348.156-.468a.498.498 0 01.397-.181c.103 0 .212.015.332.049v-.537a1.394 1.394 0 00-.363-.045zm12.414 0a1.135 1.135 0 00-.84.326c-.223.22-.332.499-.332.838 0 .362.108.658.328.88.22.223.506.336.861.336.103 0 .22-.016.346-.052v-.54c-.116.034-.216.051-.303.051a.545.545 0 01-.422-.177c-.106-.12-.16-.278-.16-.48 0-.19.053-.348.156-.468a.498.498 0 01.397-.181c.103 0 .212.015.332.049v-.537a1.394 1.394 0 00-.363-.045zm-9.598.06l-.29 2.264h.579l.156-1.559.395 1.559h.412l.379-1.555.164 1.555h.603l-.304-2.264h-.791l-.12.508c-.03.13-.06.264-.087.4l-.067.352a29.97 29.97 0 00-.258-1.26h-.771zm2.768 0l-.29 2.264h.579l.156-1.559.396 1.559h.412l.375-1.555.165 1.555h.603l-.305-2.264h-.789l-.119.508c-.03.13-.06.264-.086.4l-.066.352c-.063-.352-.15-.771-.26-1.26h-.771zm3.988 0v2.264h.611v-1.031h.012l.494 1.03h.645l-.489-1.019a.61.61 0 00.37-.552.598.598 0 00-.25-.506c-.167-.123-.394-.186-.68-.186h-.713zm3.377 0v2.264H24v-.483h-.63v-.414h.54v-.468h-.54v-.416h.626v-.483H22.76zm-4.793.004v2.264h1.24v-.483h-.627v-.416h.541v-.468h-.54v-.415h.622v-.482h-1.236zm2.025.432c.146.003.25.025.313.072.063.046.091.12.091.227 0 .156-.135.236-.404.24v-.54zm-15.22.011c-.104 0-.205.069-.301.211a1.078 1.078 0 00-.2.639c0 .096.02.2.06.303.049.13.117.198.196.215.083.016.173-.02.27-.106.123-.11.205-.273.252-.492.016-.077.023-.16.023-.246 0-.097-.02-.2-.06-.303-.05-.13-.116-.198-.196-.215a.246.246 0 00-.045-.006zm2.083 0c-.103 0-.204.069-.3.211a1.078 1.078 0 00-.2.639c0 .096.02.2.06.303.049.13.117.198.196.215.083.016.173-.02.27-.106.123-.11.205-.273.252-.492.013-.077.023-.16.023-.246 0-.097-.02-.2-.06-.303-.05-.13-.116-.198-.196-.215a.246.246 0 00-.045-.006zm4.428.006c.233 0 .354.218.354.66-.004.273-.038.46-.098.553a.293.293 0 01-.262.139.266.266 0 01-.242-.139c-.056-.093-.084-.28-.084-.562 0-.436.11-.65.332-.65Z"/></svg>WooCommerce</span><span class="tool"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#EEF3EA" d="M12.914 2.904V16.29L24 2.905H12.914zM0 2.906C0 5.966 2.483 8.45 5.543 8.45s5.542-2.484 5.543-5.544H0zm11.086 4.807L0 21.096h11.086V7.713zm7.37 7.84c-3.063 0-5.542 2.48-5.542 5.543H24c0-3.06-2.48-5.543-5.543-5.543z"/></svg>Zendesk</span><span class="tool"><span class="ph">Us</span>Userpilot</span></div></div>
+  </div>
+</section>
+
+<section id="experience" aria-labelledby="exp-h">
+  <span class="mono">// Experience</span>
+  <h2 id="exp-h" style="margin-top:14px">Nine years in digital products</h2>
+  <p class="intro">Six of them as a product manager in B2B SaaS.</p>
+  <ol class="timeline">
+    <li><span class="d">Nov 2023 to now</span><img src="logos/masterplan.png" alt=""><span><span class="r">Product Manager / Product Owner</span>, Masterplan.com</span></li>
+    <li><span class="d">Jun to Oct 2023</span><img src="logos/holdapp.png" alt=""><span><span class="r">Product Manager</span>, Holdapp</span></li>
+    <li><span class="d">Mar to May 2023</span><img src="logos/mimeeq.png" alt=""><span><span class="r">Product Manager Consultant</span>, Mimeeq, part-time</span></li>
+    <li><span class="d">Oct 2021 to Mar 2023</span><img src="logos/napoleoncat.png" alt=""><span><span class="r">Product Manager</span>, NapoleonCat</span></li>
+    <li><span class="d">Feb 2020 to Aug 2021</span><img src="logos/bowwe.png" alt=""><span><span class="r">Product Manager</span>, BOWWE</span></li>
+    <li><span class="d">May 2017 to Feb 2020</span><span class="txt">C</span><span><span class="r">Project Manager</span>, Crealeon, WordPress agency</span></li>
+  </ol>
+</section>
+
+<section id="lab" aria-labelledby="lab-h">
+  <span class="mono">// After hours</span>
+  <h2 id="lab-h" style="margin-top:14px">Small things I run on the side</h2>
+  <p class="intro">Not my day job. Small automated services where I try new ideas on myself first, without risking anyone's customers. Right now they pay for a few coffees a month.</p>
+  <div class="lab">
+    <article><h3><a href="https://kissmyskills.com" target="_blank" rel="noopener">KissMySkills</a></h3><p>A catalog of AI skills and agents for Claude, ChatGPT and Cursor, loaded by name through one MCP connector. This site borrows its design system.</p></article>
+    <article><h3><a href="https://esotorium.com" target="_blank" rel="noopener">Esotorium</a></h3><p>A personalised PDF report generator with astronomical calculations, in English, German and Spanish.</p></article>
+  </div>
+</section>
+
+<section id="creds" aria-labelledby="creds-h">
+  <span class="mono">// Education</span>
+  <h2 id="creds-h" style="margin:14px 0 36px">Education and certificates</h2>
+  <div class="creds">
+    <ul>
+      <li>MSc, Information Technology<span>Brest State Technical University, 2017</span></li>
+      <li>Google Project Management Certificate<span>Coursera, 2022</span></li>
+      <li>Scrum Master Bootcamp<span>Future Collars, 2021</span></li>
+      <li>Front-end Bootcamp: JavaScript, React, Node<span>ALX, 2019</span></li>
+    </ul>
+    <ul>
+      <li>English<span>C1, daily working language</span></li>
+      <li>Polish<span>C2</span></li>
+    </ul>
+  </div>
+</section>
+</div>
+
+<section class="contact" id="contact" aria-labelledby="c-h"><div class="wrap"><div class="grid"><div>
+  <span class="mono">// Contact</span>
+  <h2 id="c-h" style="margin-top:14px">Have a feature nobody can <span class="pink">picture yet?</span></h2>
+  <p class="intro" style="margin-bottom:0">Open to Senior Product Manager, AI Product Manager and Product Owner roles, remote in the EU.</p>
+  <div class="mail"><code id="email">leonard.pleczko@gmail.com</code><button type="button" id="copy">Copy email</button></div>
+  <div class="actions">
+    <a class="btn lime" href="mailto:leonard.pleczko@gmail.com">Write an email</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/leonard-pliachko" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn ghost" href="cv/Leonard-Pliachko-CV.pdf">Download CV</a>
+  </div>
+</div><figure class="portrait" style="margin:0"><img src="leonard-portrait.jpg" alt="Leonard Pliachko" width="900" height="900" loading="lazy"></figure></div>
+</div></section>
+
+<footer><div class="wrap">Built by me with Claude Code. Hosted on Cloudflare. Design system borrowed from KissMySkills.</div></footer>
+
+<script>
+(function(){
+  var groups=[["Sales DACH",42],["Onboarding 2026",118],["Compliance owners",17],["Team leads",36]];
+  var tb=document.getElementById('rows');
+  groups.forEach(function(g,i){var tr=document.createElement('tr');tr.innerHTML='<td><input type="checkbox" id="g'+i+'" '+(i<2?'checked':'')+'></td><td><label for="g'+i+'">'+g[0]+'</label></td><td class="n">'+g[1]+'</td>';tb.appendChild(tr)});
+  var stage=document.getElementById('stage'),btn=document.getElementById('build'),items=document.querySelectorAll('#ac li');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  btn.addEventListener('click',function(){btn.disabled=true;btn.textContent='Building';var st=reduce?0:260;
+    items.forEach(function(li,i){setTimeout(function(){li.classList.add('done')},st*(i+1))});
+    setTimeout(function(){stage.classList.add('built');btn.textContent='Prototype ready';document.getElementById('exp').focus({preventScroll:true})},st*(items.length+1))});
+  var F=["Anna","Jonas","Marta","Lukas","Sofia","Felix","Ewa","Tobias"],L=["Becker","Nowak","Schulz","Kowalska","Wagner","Hoffmann","Zielinska","Braun"];
+  document.getElementById('exp').addEventListener('click',function(){
+    var note=document.getElementById('note'),rows=["group,first_name,last_name,email,status"],n=0;
+    groups.forEach(function(g,i){if(!document.getElementById('g'+i).checked)return;for(var k=0;k<g[1];k++){var f=F[(k+i)%8],l=L[(k*3+i)%8];rows.push(g[0]+','+f+','+l+','+(f+'.'+l).toLowerCase()+k+'@example.com,'+(k%5?'active':'invited'));n++}});
+    if(!n){note.textContent='Pick at least one group to export.';note.className='note';return}
+    var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([rows.join('\n')],{type:'text/csv'}));a.download='user-groups.csv';document.body.appendChild(a);a.click();a.remove();
+    note.textContent='Exported '+n+' members to user-groups.csv. All three criteria met.';note.className='note ok';});
+  var cp=document.getElementById('copy');
+  cp.addEventListener('click',function(){var t=document.getElementById('email').textContent;
+    var done=function(){cp.textContent='Copied'};
+    if(navigator.clipboard){navigator.clipboard.writeText(t).then(done,function(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=getSelection();s.removeAllRanges();s.addRange(r)})}});
+})();
+</script>
+</body>
+</html>

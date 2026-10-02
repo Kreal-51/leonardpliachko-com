@@ -1,0 +1,15 @@
+# Leonard Pliachko
+
+> Senior Product Manager in B2B SaaS, based in Wrocław, Poland, open to remote roles in the EU. Six years as a product manager, nine in digital products. Builds clickable prototypes with Claude Code and Cloudflare before the sprint starts.
+
+## Experience
+- Masterplan.com (2023 to now): Product Manager / Product Owner, Enterprise Ready team of a corporate learning platform. xAPI, cmi5, SCIM, SSO, user group management, export.
+- Holdapp (2023): Product Manager, Homla m-commerce app for a home decor chain with 60+ stores.
+- Mimeeq (2023): Product Manager Consultant, 3D/2D product configurator.
+- NapoleonCat (2021 to 2023): Product Manager. Built Auto-moderation, 1.6M executions in the first month.
+- BOWWE (2020 to 2021): Product Manager, no-code website builder v2.0 relaunch.
+- Crealeon (2017 to 2020): Project Manager, WordPress agency.
+
+## Links
+- CV (PDF): https://leonardpliachko.com/cv/Leonard-Pliachko-CV.pdf
+- LinkedIn: https://www.linkedin.com/in/leonard-pliachko
