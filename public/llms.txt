@@ -11,5 +11,7 @@
 - Crealeon (2017 to 2020): Project Manager, WordPress agency.
 
 ## Links
-- CV (PDF): https://leonardpliachko.com/cv/Leonard-Pliachko-CV.pdf
-- LinkedIn: https://www.linkedin.com/in/leonard-pliachko
+- [Portfolio and case studies](https://leonardpliachko.com/): experience, prototypes and contact
+- [CV (PDF)](https://leonardpliachko.com/cv/Leonard-Pliachko-CV.pdf): full CV without photo
+- [CV with photo (PDF)](https://leonardpliachko.com/cv/Leonard-Pliachko-CV-photo.pdf)
+- [LinkedIn](https://www.linkedin.com/in/leonard-pliachko)
